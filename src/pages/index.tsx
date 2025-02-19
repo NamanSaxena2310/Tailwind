@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import VideoCard from "@/components/VideoCard";
+import VideoGrid from "@/components/VideoGrid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div>
-      <VideoCard title = {"How to learn coding in 30 days | 30 days plan | Code with me "} image ={"/thumbnail.jpg"} author={"Naman Saxena "} timestamp={"13 days ago"} views ={"10M"}/>
+      <VideoGrid/>
     </div>
   );
 }
