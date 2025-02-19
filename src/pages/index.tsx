@@ -1,22 +1,22 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import VideoCard from "@/components/VideoCard";
-import VideoGrid from "@/components/VideoGrid";
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import { VideoCard } from '@/components/VideoCard'
+import { VIDEOS } from '@/videos'
+import { VideoGrid } from '@/components/VideoGrid'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { LeftBar } from '@/components/LeftBar'
+import Appbar from '@/components/Appbar'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
-      <VideoGrid/>
-    </div>
-  );
+    <main>
+      <Appbar/>
+      <div className="flex">
+        <LeftBar />
+        <VideoGrid />
+      </div>
+    </main>
+  )
 }
